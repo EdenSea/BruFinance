@@ -40,12 +40,12 @@ export class AppComponent implements OnInit {
     } else {
       this.showOverlay = false;
     }
-    // this.authService.getProfile().subscribe(
-    //   () => { },
-    //   () => {
-    //     this.router.navigateByUrl('/auth/login');
-    //   }
-    // );
+    this.authService.getProfile().subscribe(
+      () => { },
+      () => {
+        this.router.navigateByUrl('/auth/login');
+      }
+    );
 
     this.fetchChainlinkGlobalValues();
   }
